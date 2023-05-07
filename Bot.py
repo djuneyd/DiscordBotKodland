@@ -31,7 +31,7 @@ async def on_message(message):
     elif message.content.startswith('$pass'):
         await message.channel.send(gen_pass(10))
     elif message.content.startswith('$spam'):
-        for i in range(10):
+        for i in range(100):
             await message.channel.send('spam')
     else:
         await message.channel.send(message.content)
