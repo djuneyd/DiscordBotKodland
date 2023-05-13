@@ -24,6 +24,13 @@ async def on_message(message):
         return
     if message.content.startswith('$hello'):
         await message.channel.send('Привет! Я бот!')
+    elif message.content.startswith('$help'):
+        await message.channel.send('$hello - поздароваться')
+        await message.channel.send('$smile - сгенерировать смайлик')
+        await message.channel.send('$coin - подбросить монетку')
+        await message.channel.send('$pass - сгенерировать пароль')
+        await message.channel.send('$spam - заспамить')
+        await message.channel.send('$greet - поздароваться по id')
     elif message.content.startswith('$smile'):
         await message.channel.send(gen_emodji())
     elif message.content.startswith('$coin'):
@@ -46,7 +53,5 @@ async def on_message(message):
 
         msg = await client.wait_for('message', check=check)
         await channel.send(f'Hello {msg.author}!')
-    else:
-        await message.channel.send(message.content)
 
 client.run(settings["TOKEN"])
