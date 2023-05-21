@@ -33,6 +33,19 @@ async def on_message(message):
     elif message.content.startswith('$spam'):
         for i in range(100):
             await message.channel.send('spam')
+            await message.channel.send('spam')
+            await message.channel.send('spam')
+            await message.channel.send('spam')
+            await message.channel.send('spam')
+    elif message.content.startswith('$greet'):
+        channel = message.channel
+        await channel.send('Say hello!')
+
+        def check(m):
+            return m.content == 'hello' and m.channel == channel
+
+        msg = await client.wait_for('message', check=check)
+        await channel.send(f'Hello {msg.author}!')
     else:
         await message.channel.send(message.content)
 
