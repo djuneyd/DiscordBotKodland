@@ -1,4 +1,4 @@
 settings = {
-    "TOKEN": "MTEwNDQwMjQ5OTQzNzMzODY5NQ.GQTFmW.SW90l4KajBbDoU59UPn_k18aF1UPm7LeIhLT9M",
+    "TOKEN": "",
     "TOKEN1": ""
 }
