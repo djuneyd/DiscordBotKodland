@@ -8,6 +8,10 @@ intents.message_content = True
 bot = commands.Bot(command_prefix = '!', intents = intents)
 
 @bot.command()
+async def help(ctx):
+    await ctx.send('info - информация про бота \n rubbish - правило о выбросе мусора \n relus - общие правила о соблюдении чистоты')
+
+@bot.command()
 async def info(ctx):
     await ctx.send('Я, экологический бот для целевой аудитории (Подростки). используя меня вы можете узнать много нового о защите окружающей среды')
 
